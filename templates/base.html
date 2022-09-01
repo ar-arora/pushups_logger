@@ -83,6 +83,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
+          {% with current_user={} %}
           {% if current_user.is_authenticated %}
           <a
             href="{{ url_for('main.new_workout') }}"
@@ -113,6 +114,7 @@
             >Log Out</a
           >
           {% endif %}
+          {% endwith %}
         </form>
       </div>
     </nav>

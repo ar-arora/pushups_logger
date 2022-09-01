@@ -11,3 +11,11 @@ def index():
 def profile():
 
     return render_template("profile.html")
+
+@main.route("/user_workouts")
+def user_workouts():
+    pass
+
+@main.route("/new_workout")
+def new_workout():
+    pass

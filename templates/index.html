@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
-    <h1>Home Page</h1>
-</head>
-<body>
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename = 'extended.beauty.css')}}"
+/>
+{% endblock %}
+{% block content%}
 
-</body>
-</html>
+<h1> Hello!!</h1>
+<center>
+    <img src="{{ url_for('static', filename='images/pushup.png') }}"
+    alt="Pushup Guy"
+    height="200px" \>
+</center>
+
+<p>
+    Welcome to the Pushups Logger application<br/>
+    Here I have tried to implement basic CRUD functionality and User Authentication using Flask.
+</p>
+{% endblock %}
