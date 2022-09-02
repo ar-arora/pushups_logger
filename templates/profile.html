@@ -8,12 +8,8 @@
     href="{{ url_for('static', filename = 'extended.beauty.css')}}"
 />
 {% endblock %}
-<head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-    <h1>Profile</h1>
-</head>
-<body>
+{% block content %}
 
-</body>
-</html>
+<h1> Welcome, {{name}} !!</h1>
+
+{% endblock %}
